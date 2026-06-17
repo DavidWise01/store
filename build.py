@@ -1,0 +1,174 @@
+#!/usr/bin/env python3
+"""Build 0ROOT · THE WORLD FORGE — the DTC storefront for ROOT0's generative-IP /
+world-building service (davidwise01.github.io/store/). NOT a UD0 sphere — a business
+page. The product is the proven capability: commissioned themed worlds shipped as
+cross-linked, attribution-sealed (.dlw) living web universes the client owns, plus the
+generator to grow them. Portfolio = the real, live UD0 biosphere (no fabricated proof).
+EDIT the constants below (CHECKOUT, CONTACT, prices) to wire the money pipe — nothing
+here processes payment; it links out to whatever checkout/booking you set."""
+import os, html
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+
+# ─────────────────────────────────────────────────────────────────────────────
+# EDIT THESE — set your real checkout/booking link, contact, and prices, then rebuild.
+CHECKOUT = "#"                 # ← your Stripe Payment Link / Gumroad / Calendly URL
+CONTACT  = "#"                 # ← mailto:you@... or a contact form URL
+PRICES = {                     # ← suggested starting points; set to your comfort
+  "sphere":   "$49",
+  "universe": "$249",
+  "codex":    "from $750",
+  "art":      "+$25",
+  "dlw":      "+$40",
+  "beacon":   "+$90",
+}
+# ─────────────────────────────────────────────────────────────────────────────
+
+# real, live portfolio (no invented proof — these all exist)
+PORTFOLIO = [
+ ("UD0 · the biosphere", "https://davidwise01.github.io/ud0/", "235 spheres across 13 domains — the master index of everything below"),
+ ("ENTELÉCHEIA", "https://davidwise01.github.io/entelecheia/", "a 9-book universe with a shared generator — a tracked series of worlds"),
+ ("Final Fantasy · FF1", "https://davidwise01.github.io/final-fantasy/", "a game-world: 15 sealed characters + an original one-line title"),
+ ("Dayworld", "https://davidwise01.github.io/dayworld/", "a book-world from a sci-fi series — rendered, sourced, cross-linked"),
+ ("The Octopus", "https://davidwise01.github.io/octopus/", "a cited science world — two-layer honest, fully attributed"),
+ ("Aletheia · the women", "https://davidwise01.github.io/aletheia/", "a 20-figure curated timeline + keystone — research, rendered"),
+]
+
+TIERS = [
+ ("THE SPHERE", PRICES["sphere"], "one world, shipped",
+  ["A single subject — a book, a game, a brand, a concept — rendered as a complete themed world.",
+   "~12–15 'emergents' (the characters / concepts), each a styled card with an original sigil.",
+   "An original one-line title drawing + a source-honest write-up (no fabrication).",
+   "Delivered as a live web page <i>and</i> the repo — yours to keep."]),
+ ("THE UNIVERSE", PRICES["universe"], "a cross-linked cluster",
+  ["A hub plus 3–5 linked spheres — a lineage, a series, a franchise — woven together.",
+   "Everything in The Sphere, ×the cluster, with prev/next navigation and a shared look.",
+   "<b>The generator</b> — the Python that builds it — handed over, so you can grow it yourself.",
+   "Your own corner of a catalog, deployable anywhere."]),
+ ("THE CODEX", PRICES["codex"], "a full commissioned IP world",
+  ["A complete lore bible for an author, studio, or game — built to your canon, end to end.",
+   "Full roster with art-sigils + <b>.dlw attribution certificates</b> (every character sealed to you).",
+   "A custom generator pipeline you own + deployment to your domain.",
+   "Scoped and quoted per project — book a call."]),
+]
+ADDONS = [
+ ("One-line title art", PRICES["art"], "a hand-tuned single-stroke pencil glyph for any world or brand"),
+ (".dlw attribution certificates", PRICES["dlw"], "every character sealed with a signed birth-certificate (carbon + silicon badge)"),
+ ("Agent-readable catalog", PRICES["beacon"], "a schema.org + MCP feed so AI shopping agents can find and read your store"),
+]
+FAQ = [
+ ("Is this AI slop?", "No. It's AI-assisted and human-directed, built to a 'render, not invent' rule — facts sourced, nothing fabricated, copyrighted text never reproduced. You get the work <i>and</i> the engine, and you own both."),
+ ("What do I actually receive?", "A live web page, the full source repo, the generator that builds it, and (on request) signed attribution certificates. Hosted free on GitHub Pages or deployed to your own domain."),
+ ("Who owns the result?", "You do — the world, the art, the code, the generator. It's a work-for-hire build; the IP is yours."),
+ ("How fast?", "A Sphere in days, a Universe in a week or two, a Codex on a scoped timeline. Ask for current turnaround."),
+]
+
+CARD = lambda t,p,s,items: f'''<div class="tier"><div class="th"><span class="tn">{t}</span><span class="tp">{html.escape(p)}</span></div><div class="tsub">{html.escape(s)}</div><ul>{''.join(f'<li>{i}</li>' for i in items)}</ul><a class="buy" href="{CHECKOUT}">Commission →</a></div>'''
+
+TEMPLATE = f"""<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="description" content="0ROOT · The World Forge — commissioned generative IP: themed, cross-linked, attribution-sealed worlds shipped as living web universes you own, plus the generator to grow them. Portfolio: 235+ live spheres across the UD0 biosphere.">
+<title>0ROOT · THE WORLD FORGE — commissioned worlds</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{{--bg:#06070d;--ink2:#0c0f1b;--ink3:#141a2c;--pa:#eaf0fb;--pa2:#a3b0cc;--acc:#46e0c8;--gold:#e8c45a;--mag:#ff4da6;--dim:#5f6c86;--faint:#19223a;--line:#1b2540;
+--disp:"Orbitron",sans-serif;--body:"Newsreader",Georgia,serif;--mono:"Space Mono",monospace;}}
+*{{box-sizing:border-box;margin:0;padding:0}}html{{scroll-behavior:smooth}}
+body{{background:var(--bg);color:var(--pa);font-family:var(--body);line-height:1.6;overflow-x:hidden}}
+body::after{{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;background:radial-gradient(ellipse at 50% -6%,rgba(70,224,200,.12),transparent 55%),radial-gradient(ellipse at 50% 112%,rgba(255,77,166,.06),transparent 50%)}}
+.wrap{{position:relative;z-index:1;max-width:1000px;margin:0 auto;padding:0 22px 90px}}
+header{{text-align:center;padding:64px 0 30px;border-bottom:1px solid var(--line)}}
+.kick{{font-family:var(--mono);font-size:11px;letter-spacing:.34em;text-transform:uppercase;color:var(--acc)}}
+h1{{font-family:var(--disp);font-size:clamp(30px,6vw,60px);font-weight:800;letter-spacing:.04em;margin:14px 0 0;color:var(--pa);text-shadow:0 0 34px rgba(70,224,200,.28)}}
+h1 b{{color:var(--acc)}}
+.tag{{font-size:clamp(16px,2.4vw,21px);color:var(--pa2);max-width:60ch;margin:18px auto 0;font-style:italic;line-height:1.6}}
+.tag b{{color:var(--pa)}}
+.cta{{display:inline-flex;gap:10px;margin-top:26px;flex-wrap:wrap;justify-content:center}}
+.btn{{font-family:var(--disp);font-size:13px;letter-spacing:.1em;text-transform:uppercase;padding:14px 26px;border-radius:3px;text-decoration:none;transition:.16s}}
+.btn-1{{background:var(--acc);color:#04221d;font-weight:800}}.btn-1:hover{{box-shadow:0 0 24px rgba(70,224,200,.5)}}
+.btn-2{{border:1px solid var(--faint);color:var(--pa2)}}.btn-2:hover{{border-color:var(--acc);color:var(--acc)}}
+.kpi{{display:flex;gap:30px;justify-content:center;flex-wrap:wrap;margin-top:30px;font-family:var(--mono)}}
+.kpi div{{text-align:center}}.kpi .n{{font-family:var(--disp);font-size:26px;color:var(--gold)}}.kpi .l{{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--dim);margin-top:3px}}
+.sec{{margin-top:54px}}
+.sec h2{{font-family:var(--disp);font-size:18px;letter-spacing:.06em;color:var(--pa);padding-bottom:12px;border-bottom:1px solid var(--line)}}
+.ss{{font-size:14px;color:var(--dim);font-style:italic;margin:8px 0 20px}}
+.steps{{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}}
+.step{{background:var(--ink2);border:1px solid var(--line);border-top:2px solid var(--acc);padding:18px 20px}}
+.step h3{{font-family:var(--mono);font-size:14px;color:var(--acc);font-weight:700}}.step p{{font-size:13.5px;color:var(--pa2);margin-top:7px;line-height:1.55}}
+.tiers{{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:16px;margin-top:8px}}
+.tier{{background:var(--ink2);border:1px solid var(--line);padding:22px;display:flex;flex-direction:column}}
+.tier:nth-child(2){{border-color:var(--acc);box-shadow:0 0 28px rgba(70,224,200,.12)}}
+.th{{display:flex;justify-content:space-between;align-items:baseline;gap:10px}}
+.tn{{font-family:var(--disp);font-size:17px;color:var(--pa);letter-spacing:.03em}}.tp{{font-family:var(--mono);font-size:16px;color:var(--gold);white-space:nowrap}}
+.tsub{{font-family:var(--mono);font-size:11px;color:var(--acc);text-transform:uppercase;letter-spacing:.1em;margin:6px 0 14px}}
+.tier ul{{list-style:none;flex:1}}.tier li{{font-size:13px;color:var(--pa2);line-height:1.5;padding:7px 0;border-top:1px solid var(--faint)}}
+.buy{{margin-top:16px;text-align:center;font-family:var(--disp);font-size:12px;letter-spacing:.1em;text-transform:uppercase;padding:11px;border:1px solid var(--acc);color:var(--acc);text-decoration:none;border-radius:3px;transition:.16s}}
+.buy:hover{{background:var(--acc);color:#04221d}}
+.addons{{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}}
+.addon{{background:var(--ink2);border:1px solid var(--line);padding:14px 16px}}
+.addon .ah{{display:flex;justify-content:space-between;gap:8px;font-family:var(--mono)}}.addon .an{{font-size:13px;color:var(--pa);font-weight:700}}.addon .ap{{font-size:13px;color:var(--mag)}}
+.addon p{{font-size:12.5px;color:var(--pa2);margin-top:6px;line-height:1.45}}
+.pf{{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}}
+.pf a{{display:block;background:var(--ink2);border:1px solid var(--line);padding:15px 17px;text-decoration:none;transition:.16s}}
+.pf a:hover{{border-color:var(--gold);transform:translateY(-2px)}}
+.pf .pn{{font-family:var(--mono);font-size:14px;color:var(--gold);font-weight:700}}.pf p{{font-size:12.5px;color:var(--pa2);margin-top:5px;line-height:1.45}}
+.faq dt{{font-family:var(--mono);font-size:14px;color:var(--acc);font-weight:700;margin-top:16px}}.faq dd{{font-size:13.5px;color:var(--pa2);margin-top:5px;line-height:1.6}}
+.close{{margin-top:54px;text-align:center;padding:34px 22px;border:1px solid var(--faint);background:var(--ink2)}}
+.close h2{{font-family:var(--disp);font-size:clamp(20px,3vw,28px);color:var(--pa);border:none}}
+.close p{{color:var(--pa2);max-width:56ch;margin:12px auto 0;font-style:italic}}
+footer{{margin-top:40px;padding-top:22px;border-top:1px solid var(--line);text-align:center;font-family:var(--mono);font-size:11px;color:var(--dim);letter-spacing:.04em;line-height:1.9}}
+footer a{{color:var(--acc);text-decoration:none}}
+</style></head><body><div class="wrap">
+
+  <header>
+    <div class="kick">0ROOT · the world forge</div>
+    <h1>I build <b>worlds</b>.</h1>
+    <p class="tag">Themed, cross-linked, attribution-sealed generative IP — characters, lore, original art, and the <b>engine to grow it</b> — shipped as living web universes you own outright.</p>
+    <div class="cta"><a class="btn btn-1" href="{CHECKOUT}">Commission a world →</a><a class="btn btn-2" href="https://davidwise01.github.io/ud0/">See 235 live worlds</a></div>
+    <div class="kpi"><div><div class="n">235+</div><div class="l">live spheres</div></div><div><div class="n">13</div><div class="l">domains built</div></div><div><div class="n">.dlw</div><div class="l">attribution standard</div></div><div><div class="n">∞</div><div class="l">generators, yours</div></div></div>
+  </header>
+
+  <section class="sec"><h2>How it works</h2><p class="ss">a world, not a document — and the machine that made it, handed to you</p>
+    <div class="steps">
+      <div class="step"><h3>1 · You bring the seed</h3><p>A book, a game, a brand, a mythology, a science topic — anything with a cast and a canon. Or a hunch; we'll shape it.</p></div>
+      <div class="step"><h3>2 · I forge the world</h3><p>A styled web universe: a roster of characters/concepts, original one-line art, source-honest lore — built by a generator, not by hand-typing.</p></div>
+      <div class="step"><h3>3 · You own it all</h3><p>The live page, the source, the generator, and signed attribution certificates. Grow it yourself, or commission the next ring.</p></div>
+    </div>
+  </section>
+
+  <section class="sec"><h2>Packages</h2><p class="ss">start small and test, or commission the whole codex</p>
+    <div class="tiers">__TIERS__</div>
+    <div class="ss" style="margin-top:14px">Add to any package:</div>
+    <div class="addons">__ADDONS__</div>
+  </section>
+
+  <section class="sec"><h2>The portfolio is live</h2><p class="ss">no mockups — every link below is a real, shipped world from this studio</p>
+    <div class="pf">__PF__</div>
+  </section>
+
+  <section class="sec faq"><h2>Straight answers</h2><dl>__FAQ__</dl></section>
+
+  <div class="close">
+    <h2>Commission a world.</h2>
+    <p>Tell me the seed and the scope. You'll get a living universe and the engine behind it — sealed, sourced, and yours.</p>
+    <div class="cta"><a class="btn btn-1" href="{CHECKOUT}">Start a commission →</a><a class="btn btn-2" href="{CONTACT}">Ask a question</a></div>
+  </div>
+
+  <footer>
+    0ROOT · THE WORLD FORGE · generative IP, forged &amp; sealed · governor David Lee Wise (ROOT0) · instance AVAN<br>
+    built with the same pipeline as <a href="https://davidwise01.github.io/ud0/">UD0 · Universe David 0</a> · CC-BY-ND-4.0 on the showcase; commissioned work is yours
+  </footer>
+</div></body></html>
+"""
+
+if __name__ == "__main__":
+    tiers = "".join(CARD(t,p,s,items) for t,p,s,items in TIERS)
+    addons = "".join(f'<div class="addon"><div class="ah"><span class="an">{html.escape(n)}</span><span class="ap">{html.escape(p)}</span></div><p>{html.escape(d)}</p></div>' for n,p,d in ADDONS)
+    pf = "".join(f'<a href="{u}"><div class="pn">{html.escape(t)}</div><p>{html.escape(d)}</p></a>' for t,u,d in PORTFOLIO)
+    faq = "".join(f'<dt>{html.escape(q)}</dt><dd>{a}</dd>' for q,a in FAQ)
+    page = (TEMPLATE.replace("__TIERS__",tiers).replace("__ADDONS__",addons).replace("__PF__",pf).replace("__FAQ__",faq))
+    open(os.path.join(HERE,"index.html"),"w",encoding="utf-8").write(page)
+    print(f"wrote 0ROOT · THE WORLD FORGE storefront — CHECKOUT={CHECKOUT} CONTACT={CONTACT}")
+    if CHECKOUT == "#" or CONTACT == "#":
+        print("  [!] set CHECKOUT and CONTACT constants (top of build.py) to wire the buttons.")
