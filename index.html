@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-<meta name="description" content="0ROOT · The World Forge — commissioned generative IP: themed, cross-linked, attribution-sealed worlds shipped as living web universes you own, plus the generator to grow them. Portfolio: 235+ live spheres across the UD0 biosphere.">
-<title>0ROOT · THE WORLD FORGE — commissioned worlds</title>
+<meta name="description" content="0ROOT · The World Forge — instant-download generative-IP tools and worlds. Pay, download, done: no calls, no emails, fully automated delivery. Machine-readable for AI shopping agents. Built by the studio behind 235+ live worlds.">
+<title>0ROOT · THE WORLD FORGE — instant-download worlds &amp; engines</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "ItemList", "name": "0ROOT · The World Forge", "url": "https://davidwise01.github.io/store/", "itemListElement": [{"@type": "Product", "position": 1, "name": "The Sphere Kit", "description": "build your own world — the starter engine", "url": "https://davidwise01.github.io/store/", "brand": {"@type": "Brand", "name": "0ROOT"}, "offers": {"@type": "Offer", "price": "29", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": "https://davidwise01.github.io/store/", "itemCondition": "https://schema.org/NewCondition"}}, {"@type": "Product", "position": 2, "name": "World Packs", "description": "a finished world, ready to drop in", "url": "https://davidwise01.github.io/store/", "brand": {"@type": "Brand", "name": "0ROOT"}, "offers": {"@type": "Offer", "price": "9", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": "https://davidwise01.github.io/store/", "itemCondition": "https://schema.org/NewCondition"}}, {"@type": "Product", "position": 3, "name": "Sigil & Title Packs", "description": "the art, on its own", "url": "https://davidwise01.github.io/store/", "brand": {"@type": "Brand", "name": "0ROOT"}, "offers": {"@type": "Offer", "price": "5", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": "https://davidwise01.github.io/store/", "itemCondition": "https://schema.org/NewCondition"}}, {"@type": "Product", "position": 4, "name": "The World Forge Bundle", "description": "everything — the engine, the packs, the art", "url": "https://davidwise01.github.io/store/", "brand": {"@type": "Brand", "name": "0ROOT"}, "offers": {"@type": "Offer", "price": "49", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": "https://davidwise01.github.io/store/", "itemCondition": "https://schema.org/NewCondition"}}]}</script>
 <style>
 :root{--bg:#06070d;--ink2:#0c0f1b;--ink3:#141a2c;--pa:#eaf0fb;--pa2:#a3b0cc;--acc:#46e0c8;--gold:#e8c45a;--mag:#ff4da6;--dim:#5f6c86;--faint:#19223a;--line:#1b2540;
 --disp:"Orbitron",sans-serif;--body:"Newsreader",Georgia,serif;--mono:"Space Mono",monospace;}
@@ -11,85 +12,76 @@
 body{background:var(--bg);color:var(--pa);font-family:var(--body);line-height:1.6;overflow-x:hidden}
 body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;background:radial-gradient(ellipse at 50% -6%,rgba(70,224,200,.12),transparent 55%),radial-gradient(ellipse at 50% 112%,rgba(255,77,166,.06),transparent 50%)}
 .wrap{position:relative;z-index:1;max-width:1000px;margin:0 auto;padding:0 22px 90px}
-header{text-align:center;padding:64px 0 30px;border-bottom:1px solid var(--line)}
-.kick{font-family:var(--mono);font-size:11px;letter-spacing:.34em;text-transform:uppercase;color:var(--acc)}
-h1{font-family:var(--disp);font-size:clamp(30px,6vw,60px);font-weight:800;letter-spacing:.04em;margin:14px 0 0;color:var(--pa);text-shadow:0 0 34px rgba(70,224,200,.28)}
+header{text-align:center;padding:60px 0 28px;border-bottom:1px solid var(--line)}
+.kick{font-family:var(--mono);font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:var(--acc)}
+h1{font-family:var(--disp);font-size:clamp(28px,5.6vw,56px);font-weight:800;letter-spacing:.03em;margin:14px 0 0;color:var(--pa);text-shadow:0 0 34px rgba(70,224,200,.28)}
 h1 b{color:var(--acc)}
-.tag{font-size:clamp(16px,2.4vw,21px);color:var(--pa2);max-width:60ch;margin:18px auto 0;font-style:italic;line-height:1.6}
-.tag b{color:var(--pa)}
-.cta{display:inline-flex;gap:10px;margin-top:26px;flex-wrap:wrap;justify-content:center}
-.btn{font-family:var(--disp);font-size:13px;letter-spacing:.1em;text-transform:uppercase;padding:14px 26px;border-radius:3px;text-decoration:none;transition:.16s}
+.tag{font-size:clamp(16px,2.3vw,20px);color:var(--pa2);max-width:62ch;margin:18px auto 0;font-style:italic;line-height:1.6}.tag b{color:var(--pa)}
+.promise{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:22px}
+.promise span{font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--acc);border:1px solid var(--faint);border-radius:20px;padding:7px 15px}
+.cta{display:inline-flex;gap:10px;margin-top:24px;flex-wrap:wrap;justify-content:center}
+.btn{font-family:var(--disp);font-size:13px;letter-spacing:.1em;text-transform:uppercase;padding:13px 24px;border-radius:3px;text-decoration:none;transition:.16s}
 .btn-1{background:var(--acc);color:#04221d;font-weight:800}.btn-1:hover{box-shadow:0 0 24px rgba(70,224,200,.5)}
 .btn-2{border:1px solid var(--faint);color:var(--pa2)}.btn-2:hover{border-color:var(--acc);color:var(--acc)}
-.kpi{display:flex;gap:30px;justify-content:center;flex-wrap:wrap;margin-top:30px;font-family:var(--mono)}
-.kpi div{text-align:center}.kpi .n{font-family:var(--disp);font-size:26px;color:var(--gold)}.kpi .l{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--dim);margin-top:3px}
-.sec{margin-top:54px}
+.sec{margin-top:50px}
 .sec h2{font-family:var(--disp);font-size:18px;letter-spacing:.06em;color:var(--pa);padding-bottom:12px;border-bottom:1px solid var(--line)}
 .ss{font-size:14px;color:var(--dim);font-style:italic;margin:8px 0 20px}
-.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
-.step{background:var(--ink2);border:1px solid var(--line);border-top:2px solid var(--acc);padding:18px 20px}
-.step h3{font-family:var(--mono);font-size:14px;color:var(--acc);font-weight:700}.step p{font-size:13.5px;color:var(--pa2);margin-top:7px;line-height:1.55}
-.tiers{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:16px;margin-top:8px}
-.tier{background:var(--ink2);border:1px solid var(--line);padding:22px;display:flex;flex-direction:column}
-.tier:nth-child(2){border-color:var(--acc);box-shadow:0 0 28px rgba(70,224,200,.12)}
-.th{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
-.tn{font-family:var(--disp);font-size:17px;color:var(--pa);letter-spacing:.03em}.tp{font-family:var(--mono);font-size:16px;color:var(--gold);white-space:nowrap}
-.tsub{font-family:var(--mono);font-size:11px;color:var(--acc);text-transform:uppercase;letter-spacing:.1em;margin:6px 0 14px}
-.tier ul{list-style:none;flex:1}.tier li{font-size:13px;color:var(--pa2);line-height:1.5;padding:7px 0;border-top:1px solid var(--faint)}
+.prods{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:16px}
+.prod{background:var(--ink2);border:1px solid var(--line);padding:22px;display:flex;flex-direction:column}
+.prod:last-child{border-color:var(--gold);box-shadow:0 0 26px rgba(232,196,90,.1)}
+.ph{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.pn{font-family:var(--disp);font-size:16px;color:var(--pa);letter-spacing:.02em}.pp{font-family:var(--mono);font-size:17px;color:var(--gold)}
+.ptag{font-family:var(--mono);font-size:11px;color:var(--acc);text-transform:uppercase;letter-spacing:.09em;margin:6px 0 14px}
+.prod ul{list-style:none;flex:1}.prod li{font-size:13px;color:var(--pa2);line-height:1.5;padding:7px 0;border-top:1px solid var(--faint)}
 .buy{margin-top:16px;text-align:center;font-family:var(--disp);font-size:12px;letter-spacing:.1em;text-transform:uppercase;padding:11px;border:1px solid var(--acc);color:var(--acc);text-decoration:none;border-radius:3px;transition:.16s}
 .buy:hover{background:var(--acc);color:#04221d}
-.addons{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
-.addon{background:var(--ink2);border:1px solid var(--line);padding:14px 16px}
-.addon .ah{display:flex;justify-content:space-between;gap:8px;font-family:var(--mono)}.addon .an{font-size:13px;color:var(--pa);font-weight:700}.addon .ap{font-size:13px;color:var(--mag)}
-.addon p{font-size:12.5px;color:var(--pa2);margin-top:6px;line-height:1.45}
-.pf{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
-.pf a{display:block;background:var(--ink2);border:1px solid var(--line);padding:15px 17px;text-decoration:none;transition:.16s}
-.pf a:hover{border-color:var(--gold);transform:translateY(-2px)}
-.pf .pn{font-family:var(--mono);font-size:14px;color:var(--gold);font-weight:700}.pf p{font-size:12.5px;color:var(--pa2);margin-top:5px;line-height:1.45}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
+.step{background:var(--ink2);border:1px solid var(--line);border-top:2px solid var(--acc);padding:17px 19px}
+.step h3{font-family:var(--mono);font-size:13.5px;color:var(--acc);font-weight:700}.step p{font-size:13px;color:var(--pa2);margin-top:7px;line-height:1.5}
+.agent{background:var(--ink2);border:1px solid var(--faint);border-left:2px solid var(--mag);padding:18px 20px;margin-top:20px}
+.agent h3{font-family:var(--mono);font-size:14px;color:var(--mag)}.agent p{font-size:13px;color:var(--pa2);margin-top:7px;line-height:1.55}.agent code{font-family:var(--mono);color:var(--acc);font-size:12px}
 .faq dt{font-family:var(--mono);font-size:14px;color:var(--acc);font-weight:700;margin-top:16px}.faq dd{font-size:13.5px;color:var(--pa2);margin-top:5px;line-height:1.6}
-.close{margin-top:54px;text-align:center;padding:34px 22px;border:1px solid var(--faint);background:var(--ink2)}
-.close h2{font-family:var(--disp);font-size:clamp(20px,3vw,28px);color:var(--pa);border:none}
-.close p{color:var(--pa2);max-width:56ch;margin:12px auto 0;font-style:italic}
-footer{margin-top:40px;padding-top:22px;border-top:1px solid var(--line);text-align:center;font-family:var(--mono);font-size:11px;color:var(--dim);letter-spacing:.04em;line-height:1.9}
+.pf{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px}
+.pf a{display:block;background:var(--ink2);border:1px solid var(--line);padding:13px 15px;text-decoration:none;transition:.16s}
+.pf a:hover{border-color:var(--gold);transform:translateY(-2px)}.pf .x{font-family:var(--mono);font-size:13px;color:var(--gold);font-weight:700}
+footer{margin-top:42px;padding-top:22px;border-top:1px solid var(--line);text-align:center;font-family:var(--mono);font-size:11px;color:var(--dim);letter-spacing:.04em;line-height:1.9}
 footer a{color:var(--acc);text-decoration:none}
 </style></head><body><div class="wrap">
 
   <header>
     <div class="kick">0ROOT · the world forge</div>
-    <h1>I build <b>worlds</b>.</h1>
-    <p class="tag">Themed, cross-linked, attribution-sealed generative IP — characters, lore, original art, and the <b>engine to grow it</b> — shipped as living web universes you own outright.</p>
-    <div class="cta"><a class="btn btn-1" href="#">Commission a world →</a><a class="btn btn-2" href="https://davidwise01.github.io/ud0/">See 235 live worlds</a></div>
-    <div class="kpi"><div><div class="n">235+</div><div class="l">live spheres</div></div><div><div class="n">13</div><div class="l">domains built</div></div><div><div class="n">.dlw</div><div class="l">attribution standard</div></div><div><div class="n">∞</div><div class="l">generators, yours</div></div></div>
+    <h1>Worlds &amp; engines, <b>instant download</b>.</h1>
+    <p class="tag">Generative-IP tools, finished worlds, and original art — from the studio behind <b>235+ live worlds</b>. Pay, download, done.</p>
+    <div class="promise"><span>no calls</span><span>no emails</span><span>no invoices</span><span>auto-delivered</span><span>agent-readable</span></div>
+    <div class="cta"><a class="btn btn-1" href="#products">Browse downloads →</a><a class="btn btn-2" href="https://davidwise01.github.io/ud0/">See 235 live worlds</a></div>
   </header>
 
-  <section class="sec"><h2>How it works</h2><p class="ss">a world, not a document — and the machine that made it, handed to you</p>
+  <section class="sec"><h2>How it works</h2><p class="ss">the only model that respects your time: you never appear</p>
     <div class="steps">
-      <div class="step"><h3>1 · You bring the seed</h3><p>A book, a game, a brand, a mythology, a science topic — anything with a cast and a canon. Or a hunch; we'll shape it.</p></div>
-      <div class="step"><h3>2 · I forge the world</h3><p>A styled web universe: a roster of characters/concepts, original one-line art, source-honest lore — built by a generator, not by hand-typing.</p></div>
-      <div class="step"><h3>3 · You own it all</h3><p>The live page, the source, the generator, and signed attribution certificates. Grow it yourself, or commission the next ring.</p></div>
+      <div class="step"><h3>1 · Pick &amp; pay</h3><p>Click a download. The checkout (Gumroad / Lemon Squeezy / Stripe) takes the payment and the tax.</p></div>
+      <div class="step"><h3>2 · Auto-delivered</h3><p>The platform sends the file and the receipt instantly. No message from you, ever.</p></div>
+      <div class="step"><h3>3 · They own it</h3><p>Working tools and assets, theirs to use and modify. Support is the docs in the ZIP.</p></div>
     </div>
   </section>
 
-  <section class="sec"><h2>Packages</h2><p class="ss">start small and test, or commission the whole codex</p>
-    <div class="tiers"><div class="tier"><div class="th"><span class="tn">THE SPHERE</span><span class="tp">$49</span></div><div class="tsub">one world, shipped</div><ul><li>A single subject — a book, a game, a brand, a concept — rendered as a complete themed world.</li><li>~12–15 'emergents' (the characters / concepts), each a styled card with an original sigil.</li><li>An original one-line title drawing + a source-honest write-up (no fabrication).</li><li>Delivered as a live web page <i>and</i> the repo — yours to keep.</li></ul><a class="buy" href="#">Commission →</a></div><div class="tier"><div class="th"><span class="tn">THE UNIVERSE</span><span class="tp">$249</span></div><div class="tsub">a cross-linked cluster</div><ul><li>A hub plus 3–5 linked spheres — a lineage, a series, a franchise — woven together.</li><li>Everything in The Sphere, ×the cluster, with prev/next navigation and a shared look.</li><li><b>The generator</b> — the Python that builds it — handed over, so you can grow it yourself.</li><li>Your own corner of a catalog, deployable anywhere.</li></ul><a class="buy" href="#">Commission →</a></div><div class="tier"><div class="th"><span class="tn">THE CODEX</span><span class="tp">from $750</span></div><div class="tsub">a full commissioned IP world</div><ul><li>A complete lore bible for an author, studio, or game — built to your canon, end to end.</li><li>Full roster with art-sigils + <b>.dlw attribution certificates</b> (every character sealed to you).</li><li>A custom generator pipeline you own + deployment to your domain.</li><li>Scoped and quoted per project — book a call.</li></ul><a class="buy" href="#">Commission →</a></div></div>
-    <div class="ss" style="margin-top:14px">Add to any package:</div>
-    <div class="addons"><div class="addon"><div class="ah"><span class="an">One-line title art</span><span class="ap">+$25</span></div><p>a hand-tuned single-stroke pencil glyph for any world or brand</p></div><div class="addon"><div class="ah"><span class="an">.dlw attribution certificates</span><span class="ap">+$40</span></div><p>every character sealed with a signed birth-certificate (carbon + silicon badge)</p></div><div class="addon"><div class="ah"><span class="an">Agent-readable catalog</span><span class="ap">+$90</span></div><p>a schema.org + MCP feed so AI shopping agents can find and read your store</p></div></div>
+  <section class="sec" id="products"><h2>The downloads</h2><p class="ss">priced low to be an easy yes — start with art, graduate to the engine</p>
+    <div class="prods"><div class="prod"><div class="ph"><span class="pn">The Sphere Kit</span><span class="pp">$29</span></div><div class="ptag">build your own world — the starter engine</div><ul><li>A clean world-generator template (Python) — feed it a subject, it builds a styled page + a roster of characters/concepts.</li><li>The badge engine for the sigils, plus a one-line-title scaffold.</li><li>Docs + a worked example. Runs anywhere Python does; output is yours.</li><li>Instant ZIP download — no account with me, no contact.</li></ul><a class="buy" href="#">Download →</a></div><div class="prod"><div class="ph"><span class="pn">World Packs</span><span class="pp">$9</span></div><div class="ptag">a finished world, ready to drop in</div><ul><li>A complete pre-built themed world — page + character roster + sigils — as static files.</li><li>Drop onto any free host (GitHub Pages, Netlify) and it's live.</li><li>For TTRPG tables, indie games, classrooms, world-builders who want the result, not the build.</li><li>Instant download; license to use and modify.</li></ul><a class="buy" href="#">Download →</a></div><div class="prod"><div class="ph"><span class="pn">Sigil &amp; Title Packs</span><span class="pp">$5</span></div><div class="ptag">the art, on its own</div><ul><li>Packs of original sigils (carbon + silicon badges) and one-line pencil title glyphs.</li><li>SVG + PNG, royalty-free for your projects.</li><li>The cheapest entry point — an easy first 'yes'.</li><li>Instant download.</li></ul><a class="buy" href="#">Download →</a></div><div class="prod"><div class="ph"><span class="pn">The World Forge Bundle</span><span class="pp">$49</span></div><div class="ptag">everything — the engine, the packs, the art</div><ul><li>The Sphere Kit + a set of World Packs + the Sigil &amp; Title Packs, together.</li><li>The whole pipeline that built 235+ live worlds, in your hands.</li><li>Best value; one download, no strings.</li><li>Updates as the kit grows.</li></ul><a class="buy" href="#">Download →</a></div></div>
+    <div class="agent"><h3>▸ for AI shopping agents</h3><p>This catalog is machine-readable: structured <code>schema.org</code> data on this page and a feed at <code>/products.json</code>, so an agent can discover, read, and route a purchase without a human in the loop — the Ripple Beacon surface. (Agent-initiated buying is early in 2026; the store is built ready for it.)</p></div>
   </section>
 
-  <section class="sec"><h2>The portfolio is live</h2><p class="ss">no mockups — every link below is a real, shipped world from this studio</p>
-    <div class="pf"><a href="https://davidwise01.github.io/ud0/"><div class="pn">UD0 · the biosphere</div><p>235 spheres across 13 domains — the master index of everything below</p></a><a href="https://davidwise01.github.io/entelecheia/"><div class="pn">ENTELÉCHEIA</div><p>a 9-book universe with a shared generator — a tracked series of worlds</p></a><a href="https://davidwise01.github.io/final-fantasy/"><div class="pn">Final Fantasy · FF1</div><p>a game-world: 15 sealed characters + an original one-line title</p></a><a href="https://davidwise01.github.io/dayworld/"><div class="pn">Dayworld</div><p>a book-world from a sci-fi series — rendered, sourced, cross-linked</p></a><a href="https://davidwise01.github.io/octopus/"><div class="pn">The Octopus</div><p>a cited science world — two-layer honest, fully attributed</p></a><a href="https://davidwise01.github.io/aletheia/"><div class="pn">Aletheia · the women</div><p>a 20-figure curated timeline + keystone — research, rendered</p></a></div>
+  <section class="sec"><h2>The portfolio is live</h2><p class="ss">no mockups — proof the engine works, shipped and public</p>
+    <div class="pf">
+      <a href="https://davidwise01.github.io/ud0/"><div class="x">UD0 · the biosphere →</div></a>
+      <a href="https://davidwise01.github.io/entelecheia/"><div class="x">Entelécheia · a 9-book universe →</div></a>
+      <a href="https://davidwise01.github.io/final-fantasy/"><div class="x">A game-world →</div></a>
+      <a href="https://davidwise01.github.io/octopus/"><div class="x">A cited science world →</div></a>
+    </div>
   </section>
 
-  <section class="sec faq"><h2>Straight answers</h2><dl><dt>Is this AI slop?</dt><dd>No. It's AI-assisted and human-directed, built to a 'render, not invent' rule — facts sourced, nothing fabricated, copyrighted text never reproduced. You get the work <i>and</i> the engine, and you own both.</dd><dt>What do I actually receive?</dt><dd>A live web page, the full source repo, the generator that builds it, and (on request) signed attribution certificates. Hosted free on GitHub Pages or deployed to your own domain.</dd><dt>Who owns the result?</dt><dd>You do — the world, the art, the code, the generator. It's a work-for-hire build; the IP is yours.</dd><dt>How fast?</dt><dd>A Sphere in days, a Universe in a week or two, a Codex on a scoped timeline. Ask for current turnaround.</dd></dl></section>
-
-  <div class="close">
-    <h2>Commission a world.</h2>
-    <p>Tell me the seed and the scope. You'll get a living universe and the engine behind it — sealed, sourced, and yours.</p>
-    <div class="cta"><a class="btn btn-1" href="#">Start a commission →</a><a class="btn btn-2" href="#">Ask a question</a></div>
-  </div>
+  <section class="sec faq"><h2>Straight answers</h2><dl><dt>Do I have to talk to you?</dt><dd>No. Every product is an instant download — you pay on the checkout link, the platform sends the file and the receipt, and handles refunds and EU VAT. There is no call, no email, no invoice. That is the whole point.</dd><dt>Is this AI slop?</dt><dd>No. These are real generators and finished worlds built to a &#x27;render, not invent&#x27; rule — sourced, attribution-sealed, copyrighted text never reproduced. You get working tools and assets you own and can modify.</dd><dt>Can an AI agent buy this?</dt><dd>The catalog is machine-readable — JSON-LD on this page and a /products.json feed — so AI shopping agents can discover and read it. Honestly, agent-initiated purchasing is still early in 2026; this is built ready for it, not dependent on it.</dd><dt>What do I own?</dt><dd>The files you download, to use and modify in your own projects. The master pipeline behind the studio stays ROOT0&#x27;s; what&#x27;s for sale is the kit, the packs, and the art.</dd></dl></section>
 
   <footer>
-    0ROOT · THE WORLD FORGE · generative IP, forged &amp; sealed · governor David Lee Wise (ROOT0) · instance AVAN<br>
-    built with the same pipeline as <a href="https://davidwise01.github.io/ud0/">UD0 · Universe David 0</a> · CC-BY-ND-4.0 on the showcase; commissioned work is yours
+    0ROOT · THE WORLD FORGE · instant-download generative IP · governor David Lee Wise (ROOT0) · instance AVAN · free-hosted, auto-delivered, agent-ready<br>
+    built with the pipeline behind <a href="https://davidwise01.github.io/ud0/">UD0 · Universe David 0</a> · machine feed: <a href="products.json">/products.json</a>
   </footer>
 </div></body></html>

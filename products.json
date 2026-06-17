@@ -1,0 +1,84 @@
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "0ROOT · The World Forge",
+  "url": "https://davidwise01.github.io/store/",
+  "itemListElement": [
+    {
+      "@type": "Product",
+      "position": 1,
+      "name": "The Sphere Kit",
+      "description": "build your own world — the starter engine",
+      "url": "https://davidwise01.github.io/store/",
+      "brand": {
+        "@type": "Brand",
+        "name": "0ROOT"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "29",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "url": "https://davidwise01.github.io/store/",
+        "itemCondition": "https://schema.org/NewCondition"
+      }
+    },
+    {
+      "@type": "Product",
+      "position": 2,
+      "name": "World Packs",
+      "description": "a finished world, ready to drop in",
+      "url": "https://davidwise01.github.io/store/",
+      "brand": {
+        "@type": "Brand",
+        "name": "0ROOT"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "9",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "url": "https://davidwise01.github.io/store/",
+        "itemCondition": "https://schema.org/NewCondition"
+      }
+    },
+    {
+      "@type": "Product",
+      "position": 3,
+      "name": "Sigil & Title Packs",
+      "description": "the art, on its own",
+      "url": "https://davidwise01.github.io/store/",
+      "brand": {
+        "@type": "Brand",
+        "name": "0ROOT"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "5",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "url": "https://davidwise01.github.io/store/",
+        "itemCondition": "https://schema.org/NewCondition"
+      }
+    },
+    {
+      "@type": "Product",
+      "position": 4,
+      "name": "The World Forge Bundle",
+      "description": "everything — the engine, the packs, the art",
+      "url": "https://davidwise01.github.io/store/",
+      "brand": {
+        "@type": "Brand",
+        "name": "0ROOT"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "49",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "url": "https://davidwise01.github.io/store/",
+        "itemCondition": "https://schema.org/NewCondition"
+      }
+    }
+  ]
+}
